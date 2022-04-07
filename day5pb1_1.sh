@@ -1,3 +1,3 @@
 #! /bin/bash -x
-random=$(( RANDOM ))
+random=$(( RANDOM%10 ))
 echo $random
