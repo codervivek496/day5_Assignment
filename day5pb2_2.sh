@@ -1,12 +1,16 @@
-#! /bin/bash -x
-read -p "enter date:-" date
-read -p "enter month:-"month
+#!/bin/bash -x
 
-if [ $(( month )) -ge 3 -a $(( date )) -ge 20 ]
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
+
+if (( ($Month <= 6 & $date <= 20) ))
 then
-	echo "True"
-elif [ $(( month )) -le 6 -a $(( date )) -le 20 ]
+        echo $Month $date "True";
+
+elif (( ($Month >= 3 & $Month < 6) & ($date>=20)  ))
 then
-	echo "True"
-else "false"
-fi
+        echo $date $Month "True";
+
+else
+
+        echo "False";
